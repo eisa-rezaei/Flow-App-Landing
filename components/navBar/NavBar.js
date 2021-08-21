@@ -21,7 +21,7 @@ const NavBar = () => {
             create <BsPlus />
           </span>
         </Link>
-        <Link href="#">sign in</Link>
+        <Link href="/sign-in">sign in</Link>
       </StyledNavBarLogin>
     </StyledNavBarContainer>
   );
