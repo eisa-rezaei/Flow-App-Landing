@@ -16,8 +16,8 @@ import {
   StyledHomePageSecoundPartButton,
   StyledHomePageSecoundPartImage,
 } from "./HomePageStyle";
-import image1 from "../../assets/bg-img-1.png";
-import image2 from "../../assets/bg-img-2.png";
+import image1 from "../../public/assets/bg-img-1.png";
+import image2 from "../../public/assets/bg-img-2.png";
 
 const HomePage = () => {
   return (
