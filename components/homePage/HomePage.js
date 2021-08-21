@@ -26,7 +26,7 @@ const HomePage = () => {
         <StyledHomePageContentDetail>
           <StyledHomePageContentDetailP
             bgColor="#f8ecd9"
-            color="#dea964"
+            color="#ea8d33"
             width="12.5vw"
           >
             <span>🔥</span> soft lunch 2.0
