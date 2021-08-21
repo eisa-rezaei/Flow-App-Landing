@@ -12,6 +12,10 @@ module.exports = (phase) => {
   /* config options for all phases except development here */
   return {
     target: "serverless",
+    images: { 
+      loader: "imgix",
+      path: "https://noop/"
+    },
     env: {
       isClient,
     },
