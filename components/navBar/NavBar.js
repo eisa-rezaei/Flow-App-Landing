@@ -12,17 +12,17 @@ const NavBar = () => {
     <StyledNavBarContainer>
       <h1>icon</h1>
       <StyledNavBarLinks>
-        <LinkHelper href="/">discover</LinkHelper>
-        <LinkHelper href="/use-cases">use cases</LinkHelper>
-        <LinkHelper href="/pricing">pricing</LinkHelper>
+        <LinkHelper href="/#">discover</LinkHelper>
+        <LinkHelper href="/use-cases#">use cases</LinkHelper>
+        <LinkHelper href="/pricing#">pricing</LinkHelper>
       </StyledNavBarLinks>
       <StyledNavBarLogin>
-        <LinkHelper href="/create-account">
+        <LinkHelper href="/create-account#">
           <span>
             create <BsPlus />
           </span>
         </LinkHelper>
-        <LinkHelper href="/sign-in">sign in</LinkHelper>
+        <LinkHelper href="/sign-in#">sign in</LinkHelper>
       </StyledNavBarLogin>
     </StyledNavBarContainer>
   );
