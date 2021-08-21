@@ -5,23 +5,24 @@ import {
   StyledNavBarLinks,
   StyledNavBarLogin,
 } from "./NavBarStyles";
+import LinkHelper from "../LinkHelper";
 
 const NavBar = () => {
   return (
     <StyledNavBarContainer>
       <h1>icon</h1>
       <StyledNavBarLinks>
-        <Link href="/">discover</Link>
-        <Link href="/use-cases">use cases</Link>
-        <Link href="/pricing">pricing</Link>
+        <LinkHelper href="/">discover</LinkHelper>
+        <LinkHelper href="/use-cases">use cases</LinkHelper>
+        <LinkHelper href="/pricing">pricing</LinkHelper>
       </StyledNavBarLinks>
       <StyledNavBarLogin>
-        <Link href="/create-account">
+        <LinkHelper href="/create-account">
           <span>
             create <BsPlus />
           </span>
-        </Link>
-        <Link href="/sign-in">sign in</Link>
+        </LinkHelper>
+        <LinkHelper href="/sign-in">sign in</LinkHelper>
       </StyledNavBarLogin>
     </StyledNavBarContainer>
   );
