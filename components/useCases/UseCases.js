@@ -1,5 +1,5 @@
 const UseCases = () => {
-  return <div>hello usecases</div>;
+  return <div>Usecases page in under development...</div>;
 };
 
 export default UseCases;

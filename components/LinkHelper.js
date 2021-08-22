@@ -5,7 +5,7 @@ function LinkHelper({ children, href }) {
 
   const handleClick = (e) => {
     e.preventDefault();
-    router.push(`/?pages=${href}`);
+    router.push(`/?page=${href}`);
   };
 
   return (
