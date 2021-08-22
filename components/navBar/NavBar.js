@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { useRouter } from "next/router";
 import { BsPlus } from "react-icons/bs";
 import {
   StyledNavBarContainer,
@@ -8,21 +8,41 @@ import {
 import LinkHelper from "../LinkHelper";
 
 const NavBar = () => {
+  const router = useRouter();
+  const route = router.query.page;
+  const navChangeBgHandler = {
+    home: "1",
+    usecases: "2",
+    pricing: "3",
+  };
+  const navLinkBg = navChangeBgHandler[route] || "1";
   return (
     <StyledNavBarContainer>
-      <h1>icon</h1>
-      <StyledNavBarLinks>
-        <LinkHelper href="/#">discover</LinkHelper>
-        <LinkHelper href="/use-cases#">use cases</LinkHelper>
-        <LinkHelper href="/pricing#">pricing</LinkHelper>
+      <h1>
+        flow
+        <span
+          style={{
+            color: "#fff",
+            backgroundColor: "orange",
+            borderRadius: "10px",
+            fontSize: "1.2rem",
+          }}
+        >
+          App
+        </span>
+      </h1>
+      <StyledNavBarLinks navChangeBg={navLinkBg}>
+        <LinkHelper href="home">Discover</LinkHelper>
+        <LinkHelper href="usecases">Use cases</LinkHelper>
+        <LinkHelper href="pricing">Pricing</LinkHelper>
       </StyledNavBarLinks>
       <StyledNavBarLogin>
-        <LinkHelper href="/create-account#">
+        <LinkHelper href="createaccount">
           <span>
-            create <BsPlus />
+            Create <BsPlus />
           </span>
         </LinkHelper>
-        <LinkHelper href="/sign-in#">sign in</LinkHelper>
+        <LinkHelper href="signin">Sign in</LinkHelper>
       </StyledNavBarLogin>
     </StyledNavBarContainer>
   );
