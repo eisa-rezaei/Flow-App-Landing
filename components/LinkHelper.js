@@ -3,9 +3,9 @@ import { useRouter } from "next/router";
 function LinkHelper({ children, href }) {
   const router = useRouter();
 
-  const handleClick = (e) => {
-    e.preventDefault();
+  const handleClick = () => {
     router.push(`/?page=${href}`);
+    console.log(router.query.page);
   };
 
   return (
