@@ -1,11 +1,11 @@
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 
 function LinkHelper({ children, href }) {
-  const router = useRouter();
+  // const router = useRouter();
 
   const handleClick = () => {
-    router.push(`/?page=${href}`);
-    console.log(router.query.page);
+    // router.push(`/?page=${href}`);
+    console.log("href : ", href);
   };
 
   return (
