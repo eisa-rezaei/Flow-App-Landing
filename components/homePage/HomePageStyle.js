@@ -83,6 +83,9 @@ export const StyledHomePageContentDetailInput = styled.div`
 export const StyledHomePageContentImage = styled.div`
   width: 65%;
   display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   box-shadow: 0px 0px 100px 100px #f7f9fd inset;
   background: rgb(219, 224, 252);
@@ -92,6 +95,11 @@ export const StyledHomePageContentImage = styled.div`
     rgba(247, 230, 189, 1) 51%,
     rgba(237, 205, 252, 1) 80%
   );
+  & img {
+    width: 850px;
+    height: 680px;
+    z-index: 2;
+  }
   & span {
     width: 450px;
     height: 450px;
@@ -110,8 +118,10 @@ export const StyledHomePageSecoundPartImage = styled.div`
   height: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-left: -130px;
   position: relative;
+  overflow: hidden;
   box-shadow: 0px 0px 100px 100px #f7f9fd inset;
   background: rgb(219, 224, 252);
   background: linear-gradient(
@@ -120,11 +130,16 @@ export const StyledHomePageSecoundPartImage = styled.div`
     rgba(247, 230, 189, 1) 51%,
     rgba(237, 205, 252, 1) 80%
   );
+  & img {
+    width: 1000px;
+    height: 750px;
+    z-index: 2;
+  }
   & span {
     width: 450px;
     height: 450px;
-    top: 200px;
-    left: 250px;
+    top: 300px;
+    left: 230px;
     position: absolute;
     background-color: #ffffff60;
     border-radius: 100px;

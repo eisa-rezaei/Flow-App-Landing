@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { AiOutlineRightCircle, AiOutlineVerticalLeft } from "react-icons/ai";
 import { FaFigma, FaPlay } from "react-icons/fa";
 import { GiCutDiamond } from "react-icons/gi";
@@ -16,8 +15,6 @@ import {
   StyledHomePageSecoundPartButton,
   StyledHomePageSecoundPartImage,
 } from "./HomePageStyle";
-import image1 from "../../public/assets/bg-img-1.png";
-import image2 from "../../public/assets/bg-img-2.png";
 
 const HomePage = () => {
   return (
@@ -44,13 +41,13 @@ const HomePage = () => {
         </StyledHomePageContentDetail>
         <StyledHomePageContentImage>
           <span />
-          <Image src={image1} alt="flow" />
+          <img src="./assets/bg-img-1.png" alt="flow" />
         </StyledHomePageContentImage>
       </StyledHomePageContent>
       <StyledHomePageContent>
         <StyledHomePageSecoundPartImage>
           <span />
-          <Image src={image2} alt="flow" />
+          <img src="./assets/bg-img-2.png" alt="flow" />
         </StyledHomePageSecoundPartImage>
         <StyledHomePageContentDetail>
           <h2>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledNavBarContainer = styled.nav`
   width: 100%;
-  height: 100px;
+  height: 80px;
   padding: 0 5vw;
   display: flex;
   flex-direction: row;
@@ -25,7 +25,7 @@ export const StyledNavBarLinks = styled.div`
     align-items: center;
     justify-content: space-between;
     color: #72727d;
-    :first-child {
+    :nth-child(${(props) => props.navChangeBg}) {
       font-weight: 600;
       color: #0c0338;
       ::after {
