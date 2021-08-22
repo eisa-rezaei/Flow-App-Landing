@@ -10,6 +10,9 @@ export const StyledNavBarContainer = styled.nav`
   justify-content: space-between;
   z-index: 10;
   background-color: #f7f9fd;
+  & span {
+    cursor: pointer;
+  }
 `;
 export const StyledNavBarLinks = styled.div`
   width: 25vw;
@@ -18,7 +21,7 @@ export const StyledNavBarLinks = styled.div`
   align-items: center;
   justify-content: space-around;
   padding-top: 15px;
-  & a {
+  & span {
     height: 40px;
     display: flex;
     flex-direction: column;
@@ -45,18 +48,16 @@ export const StyledNavBarLogin = styled.div`
   align-items: center;
   justify-content: space-between;
   font-size: 0.8rem;
-  & a,
-  span {
+  & span {
     width: 7vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    cursor: pointer;
     & svg {
       font-size: 1.3rem;
     }
   }
-  & a:nth-child(2) {
+  & span:nth-child(2) {
     width: 6vw;
     height: 40px;
     color: #fff;

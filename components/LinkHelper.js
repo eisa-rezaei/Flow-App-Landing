@@ -9,9 +9,9 @@ function LinkHelper({ children, href }) {
   };
 
   return (
-    <a href={href} onClick={handleClick}>
+    <span href={href} onClick={handleClick}>
       {children}
-    </a>
+    </span>
   );
 }
 

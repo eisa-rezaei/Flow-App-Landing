@@ -18,21 +18,23 @@ const NavBar = () => {
   const navLinkBg = navChangeBgHandler[route] || "1";
   return (
     <StyledNavBarContainer>
-      <h1>
-        flow
-        <span
-          style={{
-            color: "#fff",
-            backgroundColor: "orange",
-            borderRadius: "10px",
-            fontSize: "1.1rem",
-            marginLeft: "5px",
-            padding: "5px",
-          }}
-        >
-          App
-        </span>
-      </h1>
+      <LinkHelper href="home">
+        <h1>
+          flow
+          <span
+            style={{
+              color: "#fff",
+              backgroundColor: "orange",
+              borderRadius: "10px",
+              fontSize: "1.1rem",
+              marginLeft: "5px",
+              padding: "5px",
+            }}
+          >
+            App
+          </span>
+        </h1>
+      </LinkHelper>
       <StyledNavBarLinks navChangeBg={navLinkBg}>
         <LinkHelper href="home">Discover</LinkHelper>
         <LinkHelper href="usecases">Use cases</LinkHelper>
