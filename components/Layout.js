@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>flow app landing</title>
+        <title>Flow app landing</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
