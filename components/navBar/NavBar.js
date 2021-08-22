@@ -9,19 +9,13 @@ import LinkHelper from "../LinkHelper";
 
 const NavBar = () => {
   const router = useRouter();
-  const navChangeBgHandler = () => {
-    const route = router.route;
-    if (route === "/") {
-      return "1";
-    }
-    if (route === "/page=use-cases") {
-      return "2";
-    }
-    if (route === "/page=pricing") {
-      return "3";
-    }
+  const route = router.query.pages;
+  const navChangeBgHandler = {
+    home: "1",
+    usecases: "2",
+    pricing: "3",
   };
-
+  const navLinkBg = navChangeBgHandler[route] || "1";
   return (
     <StyledNavBarContainer>
       <h1>
@@ -37,18 +31,18 @@ const NavBar = () => {
           App
         </span>
       </h1>
-      <StyledNavBarLinks navChangeBg={navChangeBgHandler}>
-        <LinkHelper href="/">discover</LinkHelper>
-        <LinkHelper href="use-cases">use cases</LinkHelper>
+      <StyledNavBarLinks navChangeBg={navLinkBg}>
+        <LinkHelper href="home">discover</LinkHelper>
+        <LinkHelper href="usecases">use cases</LinkHelper>
         <LinkHelper href="pricing">pricing</LinkHelper>
       </StyledNavBarLinks>
       <StyledNavBarLogin>
-        <LinkHelper href="create-account">
+        <LinkHelper href="createaccount">
           <span>
             create <BsPlus />
           </span>
         </LinkHelper>
-        <LinkHelper href="sign-in">sign in</LinkHelper>
+        <LinkHelper href="signin">sign in</LinkHelper>
       </StyledNavBarLogin>
     </StyledNavBarContainer>
   );

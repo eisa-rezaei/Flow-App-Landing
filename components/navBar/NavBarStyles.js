@@ -36,17 +36,6 @@ export const StyledNavBarLinks = styled.div`
         background-color: orange;
       }
     }
-    :focus {
-      font-weight: 600;
-      color: #0c0338;
-      ::after {
-        content: "";
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: orange;
-      }
-    }
   }
 `;
 export const StyledNavBarLogin = styled.div`
