@@ -13,6 +13,7 @@ export const StyledHomePageContent = styled.article`
   display: flex;
   flex-direction: row;
   align-items: center;
+  overflow: hidden;
 `;
 export const StyledHomePageContentDetail = styled.div`
   width: 35%;
@@ -150,6 +151,7 @@ export const StyledHomePageSecoundPartApps = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
+  position: relative;
   & h5 {
     width: 17vw;
     color: orange;
@@ -187,4 +189,14 @@ export const StyledHomePageSecoundPartButton = styled.button`
   align-items: center;
   justify-content: space-evenly;
   cursor: pointer;
+`;
+export const StyledHomePageSecoundPartBg = styled.span`
+  width: 300px;
+  height: 300px;
+  bottom: -340px;
+  right: -240px;
+  transform: rotate(-15deg);
+  border-radius: 80px;
+  position: absolute;
+  background-color: #fdf1f0;
 `;

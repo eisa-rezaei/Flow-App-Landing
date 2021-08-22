@@ -25,7 +25,9 @@ const NavBar = () => {
             color: "#fff",
             backgroundColor: "orange",
             borderRadius: "10px",
-            fontSize: "1.2rem",
+            fontSize: "1.1rem",
+            marginLeft: "5px",
+            padding: "5px",
           }}
         >
           App

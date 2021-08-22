@@ -12,6 +12,7 @@ import {
   StyledHomePageContentDetailTitle,
   StyledHomePageContentImage,
   StyledHomePageSecoundPartApps,
+  StyledHomePageSecoundPartBg,
   StyledHomePageSecoundPartButton,
   StyledHomePageSecoundPartImage,
 } from "./HomePageStyle";
@@ -72,6 +73,7 @@ const HomePage = () => {
               <FaPlay />
               watch a demo
             </StyledHomePageSecoundPartButton>
+            <StyledHomePageSecoundPartBg />
           </StyledHomePageSecoundPartApps>
         </StyledHomePageContentDetail>
       </StyledHomePageContent>
