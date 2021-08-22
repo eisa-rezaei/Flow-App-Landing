@@ -5,7 +5,7 @@ function LinkHelper({ children, href }) {
 
   const handleClick = () => {
     // router.push(`/?page=${href}`);
-    console.log("href : ", href);
+    console.log("hello");
   };
 
   return (
