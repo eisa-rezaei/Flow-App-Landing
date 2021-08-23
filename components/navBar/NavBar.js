@@ -5,7 +5,6 @@ import {
   StyledNavBarLinks,
   StyledNavBarLogin,
 } from "./NavBarStyles";
-import LinkHelper from "../LinkHelper";
 
 const NavBar = () => {
   const router = useRouter();
@@ -16,37 +15,40 @@ const NavBar = () => {
     pricing: "3",
   };
   const navLinkBg = navChangeBgHandler[route] || "1";
+
+  const navLinkHandler = (e) => {
+    const href = e.target.innerText.toLowerCase();
+    router.push(`/?page=${href}`);
+  };
   return (
     <StyledNavBarContainer>
-      <LinkHelper href="home">
-        <h1>
-          flow
-          <span
-            style={{
-              color: "#fff",
-              backgroundColor: "orange",
-              borderRadius: "10px",
-              fontSize: "1.1rem",
-              marginLeft: "5px",
-              padding: "5px",
-            }}
-          >
-            App
-          </span>
-        </h1>
-      </LinkHelper>
+      <h1 onClick={navLinkHandler}>
+        flow
+        <span
+          style={{
+            color: "#fff",
+            backgroundColor: "orange",
+            borderRadius: "10px",
+            fontSize: "1.1rem",
+            marginLeft: "5px",
+            padding: "5px",
+          }}
+        >
+          App
+        </span>
+      </h1>
       <StyledNavBarLinks navChangeBg={navLinkBg}>
-        <LinkHelper href="home">Discover</LinkHelper>
-        <LinkHelper href="usecases">Use cases</LinkHelper>
-        <LinkHelper href="pricing">Pricing</LinkHelper>
+        <span onClick={navLinkHandler}>Discover</span>
+        <span onClick={navLinkHandler}>UseCases</span>
+        <span onClick={navLinkHandler}>Pricing</span>
       </StyledNavBarLinks>
       <StyledNavBarLogin>
-        <LinkHelper href="createaccount">
+        <span onClick={navLinkHandler}>
           <span>
             Create <BsPlus />
           </span>
-        </LinkHelper>
-        <LinkHelper href="signin">Sign in</LinkHelper>
+        </span>
+        <span onClick={navLinkHandler}>SignIn</span>
       </StyledNavBarLogin>
     </StyledNavBarContainer>
   );
