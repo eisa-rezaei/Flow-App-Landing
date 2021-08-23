@@ -9,6 +9,7 @@ import {
   StyledHomePageContentDetail,
   StyledHomePageContentDetailInput,
   StyledHomePageContentDetailP,
+  StyledHomePageContentDetailparagraph,
   StyledHomePageContentDetailTitle,
   StyledHomePageContentImage,
   StyledHomePageSecoundPartApps,
@@ -22,20 +23,16 @@ const HomePage = () => {
     <StyledHomePageContainer>
       <StyledHomePageContent>
         <StyledHomePageContentDetail>
-          <StyledHomePageContentDetailP
-            bgColor="#f8ecd9"
-            color="#ea8d33"
-            width="12.5vw"
-          >
+          <StyledHomePageContentDetailP>
             <span>🔥</span> soft lunch 2.0
           </StyledHomePageContentDetailP>
           <StyledHomePageContentDetailTitle>
             let your creativity flow <span>.</span>
           </StyledHomePageContentDetailTitle>
-          <StyledHomePageContentDetailP width="34vw" color="#72727d">
+          <StyledHomePageContentDetailparagraph>
             Collect user feedback,design persons brianstorm,design customer
             journeys and much more .
-          </StyledHomePageContentDetailP>
+          </StyledHomePageContentDetailparagraph>
           <StyledHomePageContentDetailInput>
             <input placeholder="Your email" /> <button>get started</button>
           </StyledHomePageContentDetailInput>

@@ -14,6 +14,12 @@ export const StyledHomePageContent = styled.article`
   flex-direction: row;
   align-items: center;
   overflow: hidden;
+  @media (max-width: 600px) {
+    width: 100vw;
+    flex-direction: column-reverse;
+    justify-content: left;
+    align-items: left;
+  }
 `;
 export const StyledHomePageContentDetail = styled.div`
   width: 35%;
@@ -23,30 +29,55 @@ export const StyledHomePageContentDetail = styled.div`
   justify-content: space-around;
   padding-left: 5vw;
   & h2 {
-    font-style: 4rem;
+    font-size: 1.8rem;
     margin: 25px 0;
   }
   & p {
     font-size: 0.8rem;
     margin-bottom: 25px;
   }
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 2vw;
+    & h2 {
+      font-size: 2rem;
+    }
+  }
 `;
 export const StyledHomePageContentDetailP = styled.p`
-  width: ${(props) => props.width};
+  width: 12.5vw;
   padding: 10px;
-  color: ${(props) => props.color};
+  color: #ea8d33;
+  display: flex;
+  font-size: 0.8rem;
   border-radius: 40px;
-  background-color: ${(props) => props.bgColor};
+  align-items: center;
+  background-color: #f8ecd9;
+  justify-content: space-evenly;
+  & span {
+    font-size: 1.2rem;
+  }
+  @media (max-width: 600px) {
+    width: 35vw;
+  }
+`;
+export const StyledHomePageContentDetailparagraph = styled.p`
+  width: 100%;
+  padding: 10px;
+  color: #72727d;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   font-size: 0.8rem;
-  display: flex;
-  align-items: center;
   & span {
     font-size: 1.2rem;
   }
+  @media (max-width: 600px) {
+    width: 80vw;
+  }
 `;
+
 export const StyledHomePageContentDetailTitle = styled.h1`
   margin: 20px 0;
   font-size: 4rem;
@@ -54,6 +85,11 @@ export const StyledHomePageContentDetailTitle = styled.h1`
   line-height: 5.5rem;
   & span {
     color: orange;
+  }
+  @media (max-width: 600px) {
+    font-size: 3rem;
+    line-height: 3rem;
+    padding: 0 10px;
   }
 `;
 export const StyledHomePageContentDetailInput = styled.div`
@@ -63,6 +99,7 @@ export const StyledHomePageContentDetailInput = styled.div`
   display: flex;
   padding: 20px 5px;
   align-items: center;
+  justify-content: center;
   border-radius: 30px;
   background-color: #fff;
   & input {
@@ -72,7 +109,7 @@ export const StyledHomePageContentDetailInput = styled.div`
     border-radius: 30px;
   }
   & button {
-    width: 7.5vw;
+    width: 100px;
     height: 50px;
     color: #fff;
     border-radius: 30px;
@@ -112,6 +149,20 @@ export const StyledHomePageContentImage = styled.div`
     border-radius: 80px;
     transform: rotate(35deg);
   }
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 100%;
+    & img {
+      width: max-content;
+      height: 400px;
+    }
+    & span {
+      width: 300px;
+      height: 300px;
+      top: 60px;
+      left: 0;
+    }
+  }
 `;
 
 export const StyledHomePageSecoundPartImage = styled.div`
@@ -146,6 +197,20 @@ export const StyledHomePageSecoundPartImage = styled.div`
     border-radius: 100px;
     transform: rotate(75deg);
   }
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-left: 0px;
+    & img {
+      width: max-content;
+      height: 500px;
+    }
+    & span {
+      width: 300px;
+      height: 300px;
+      top: 200px;
+      left: 80px;
+    }
+  }
 `;
 export const StyledHomePageSecoundPartApps = styled.div`
   display: flex;
@@ -153,7 +218,7 @@ export const StyledHomePageSecoundPartApps = styled.div`
   align-items: left;
   position: relative;
   & h5 {
-    width: 17vw;
+    width: 250px;
     color: orange;
     display: flex;
     align-items: center;
@@ -176,9 +241,17 @@ export const StyledHomePageSecoundPartApps = styled.div`
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
   }
+  @media (max-width: 600px) {
+    & span {
+      width: 350px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
 `;
 export const StyledHomePageSecoundPartButton = styled.button`
-  width: 10vw;
+  width: 150px;
   height: 50px;
   color: #ea8d33;
   border-radius: 30px;
@@ -189,6 +262,9 @@ export const StyledHomePageSecoundPartButton = styled.button`
   align-items: center;
   justify-content: space-evenly;
   cursor: pointer;
+  @media (max-width: 600px) {
+    width: 200px;
+  }
 `;
 export const StyledHomePageSecoundPartBg = styled.span`
   width: 300px;

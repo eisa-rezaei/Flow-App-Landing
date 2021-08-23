@@ -1,10 +1,16 @@
 import { useRouter } from "next/router";
 import { BsPlus } from "react-icons/bs";
+import { ImHome } from "react-icons/im";
+import { CgDollar } from "react-icons/cg";
+
 import {
   StyledNavBarContainer,
+  StyledNavBarIcons,
   StyledNavBarLinks,
   StyledNavBarLogin,
+  StyledNavBarLogo,
 } from "./NavBarStyles";
+import { GoBriefcase } from "react-icons/go";
 
 const NavBar = () => {
   const router = useRouter();
@@ -16,37 +22,36 @@ const NavBar = () => {
   };
   const navLinkBg = navChangeBgHandler[route] || "1";
 
-  const navLinkHandler = (e) => {
-    const href = e.target.innerText.toLowerCase();
-    router.push(`/?page=${href}`);
+  const navLinkHandler = (page) => () => {
+    router.push(`/?page=${page}`);
   };
   return (
     <StyledNavBarContainer>
-      <h1 onClick={navLinkHandler}>
+      <StyledNavBarLogo onClick={navLinkHandler("home")}>
         flow
-        <span
-          style={{
-            color: "#fff",
-            backgroundColor: "orange",
-            borderRadius: "10px",
-            fontSize: "1.1rem",
-            marginLeft: "5px",
-            padding: "5px",
-          }}
-        >
-          App
-        </span>
-      </h1>
+        <span>App</span>
+      </StyledNavBarLogo>
       <StyledNavBarLinks navChangeBg={navLinkBg}>
-        <span onClick={navLinkHandler}>Discover</span>
-        <span onClick={navLinkHandler}>UseCases</span>
-        <span onClick={navLinkHandler}>Pricing</span>
+        <span onClick={navLinkHandler("home")}>Discover</span>
+        <span onClick={navLinkHandler("usecases")}>UseCases</span>
+        <span onClick={navLinkHandler("pricing")}>Pricing</span>
       </StyledNavBarLinks>
+      <StyledNavBarIcons navChangeBg={navLinkBg}>
+        <span onClick={navLinkHandler("home")}>
+          <ImHome />
+        </span>
+        <span onClick={navLinkHandler("usecases")}>
+          <GoBriefcase />
+        </span>
+        <span onClick={navLinkHandler("pricing")}>
+          <CgDollar />
+        </span>
+      </StyledNavBarIcons>
       <StyledNavBarLogin>
-        <span onClick={navLinkHandler}>
+        <span onClick={navLinkHandler("createacount")}>
           Create <BsPlus />
         </span>
-        <span onClick={navLinkHandler}>SignIn</span>
+        <span onClick={navLinkHandler("signin")}>SignIn</span>
       </StyledNavBarLogin>
     </StyledNavBarContainer>
   );
