@@ -44,9 +44,7 @@ const NavBar = () => {
       </StyledNavBarLinks>
       <StyledNavBarLogin>
         <span onClick={navLinkHandler}>
-          <span>
-            Create <BsPlus />
-          </span>
+          Create <BsPlus />
         </span>
         <span onClick={navLinkHandler}>SignIn</span>
       </StyledNavBarLogin>
