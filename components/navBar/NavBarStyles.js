@@ -14,6 +14,20 @@ export const StyledNavBarContainer = styled.nav`
     cursor: pointer;
   }
 `;
+export const StyledNavBarLogo = styled.span`
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: none;
+  & span {
+    color: #fff;
+    background-color: orange;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    margin-left: 5px;
+    padding: 5px;
+  }
+`;
+
 export const StyledNavBarLinks = styled.div`
   width: 25vw;
   height: 70px;
@@ -40,7 +54,42 @@ export const StyledNavBarLinks = styled.div`
       }
     }
   }
+  @media (max-width: 600px) {
+    & span {
+      display: none;
+    }
+  }
 `;
+export const StyledNavBarIcons = styled.div`
+  width: 40vw;
+  height: 70px;
+  padding-top: 15px;
+  display: none;
+  & span:nth-child(${(props) => props.navChangeBg}) {
+    color: orange;
+  }
+  & span {
+    font-size: 1.3rem;
+    color: #72727d;
+    display: flex;
+    flex-direction: column;
+    :hover {
+      ::after {
+        content: "";
+        width: inherit;
+        height: 2px;
+        background-color: orange;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+  }
+`;
+
 export const StyledNavBarLogin = styled.div`
   width: 13vw;
   display: flex;
@@ -63,5 +112,8 @@ export const StyledNavBarLogin = styled.div`
     color: #fff;
     background-color: orange;
     border-radius: 30px;
+  }
+  @media (max-width: 600px) {
+    display: none;
   }
 `;
